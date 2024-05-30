@@ -1,6 +1,12 @@
-## DATA ARCHITECTURE
 
-![image](https://github.com/clonex33/dashboard/assets/155863966/bf182529-33f2-4ed3-bc8d-ef95d394c3a2)
+## APACHE AIRFLOW PIPELINE
 
-## DASHBOARD OUTPUT
-![image](https://github.com/clonex33/dashboard/assets/155863966/86317adc-d36d-451f-8955-b5bde0458ff8)
+![DATA ENGINEERING PIPELINE DESGIN](https://github.com/clonex33/dashboard/assets/155863966/0cacd587-0866-4ea3-b25c-d90dfacbc9cf)
+
+
+- CSV DATA is ingested in PYTHON PANDAS
+- WORKFLOW is orchestrated in APACHE-AIRFLOW
+- OUTPUT is save in SQLITE
+- VISUALISATION is done with POWER BI
+
+
