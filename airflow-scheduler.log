@@ -1,0 +1,42 @@
+2024-05-28 11:39:34,090 INFO - Task context logging is enabled
+2024-05-28 11:39:34,091 INFO - Loaded executor: SequentialExecutor
+2024-05-28 11:39:34,125 INFO - Starting the scheduler
+2024-05-28 11:39:34,126 INFO - Processing each file at most -1 times
+2024-05-28 11:39:34,130 INFO - Launched DagFileProcessorManager with pid: 29976
+2024-05-28 11:39:34,131 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-05-28 11:39:34,134 INFO - Configured default timezone UTC
+2024-05-28 11:39:34,151 INFO - Marked 1 SchedulerJob instances as failed
+2024-05-28 11:39:34,898 INFO - 1 tasks up for execution:
+	<TaskInstance: data_processing_dag.process_csv_file manual__2024-05-28T03:25:27.677442+00:00 [scheduled]>
+2024-05-28 11:39:34,899 INFO - DAG data_processing_dag has 0/16 running and queued tasks
+2024-05-28 11:39:34,899 INFO - Setting the following tasks to queued state:
+	<TaskInstance: data_processing_dag.process_csv_file manual__2024-05-28T03:25:27.677442+00:00 [scheduled]>
+2024-05-28 11:39:34,906 INFO - Sending TaskInstanceKey(dag_id='data_processing_dag', task_id='process_csv_file', run_id='manual__2024-05-28T03:25:27.677442+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-05-28 11:39:34,907 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'data_processing_dag', 'process_csv_file', 'manual__2024-05-28T03:25:27.677442+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_dag.py']
+2024-05-28 11:39:34,914 INFO - Executing command: ['airflow', 'tasks', 'run', 'data_processing_dag', 'process_csv_file', 'manual__2024-05-28T03:25:27.677442+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_dag.py']
+2024-05-28 11:39:37,241 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='data_processing_dag', task_id='process_csv_file', run_id='manual__2024-05-28T03:25:27.677442+00:00', try_number=1, map_index=-1)
+2024-05-28 11:39:37,254 INFO - TaskInstance Finished: dag_id=data_processing_dag, task_id=process_csv_file, run_id=manual__2024-05-28T03:25:27.677442+00:00, map_index=-1, run_start_date=2024-05-28 03:39:36.513187+00:00, run_end_date=2024-05-28 03:39:36.872983+00:00, run_duration=0.359796, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=53, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2024-05-28 03:39:34.900588+00:00, queued_by_job_id=52, pid=30011
+2024-05-28 11:40:58,147 ERROR - Marking run <DagRun data_processing_dag @ 2024-05-28 03:25:27.677442+00:00: manual__2024-05-28T03:25:27.677442+00:00, state:running, queued_at: 2024-05-28 03:25:27.706427+00:00. externally triggered: True> failed
+2024-05-28 11:40:58,148 INFO - DagRun Finished: dag_id=data_processing_dag, execution_date=2024-05-28 03:25:27.677442+00:00, run_id=manual__2024-05-28T03:25:27.677442+00:00, run_start_date=2024-05-28 03:39:34.827682+00:00, run_end_date=2024-05-28 03:40:58.148421+00:00, run_duration=83.320739, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-05-28 03:25:27.677442+00:00, data_interval_end=2024-05-28 03:25:27.677442+00:00, dag_hash=264ca8097941507f518d8e29fe30779d
+2024-05-28 11:41:11,255 INFO - 1 tasks up for execution:
+	<TaskInstance: data_processing_dag.process_csv_file manual__2024-05-28T03:41:10.721351+00:00 [scheduled]>
+2024-05-28 11:41:11,255 INFO - DAG data_processing_dag has 0/16 running and queued tasks
+2024-05-28 11:41:11,256 INFO - Setting the following tasks to queued state:
+	<TaskInstance: data_processing_dag.process_csv_file manual__2024-05-28T03:41:10.721351+00:00 [scheduled]>
+2024-05-28 11:41:11,264 INFO - Sending TaskInstanceKey(dag_id='data_processing_dag', task_id='process_csv_file', run_id='manual__2024-05-28T03:41:10.721351+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2024-05-28 11:41:11,265 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'data_processing_dag', 'process_csv_file', 'manual__2024-05-28T03:41:10.721351+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_dag.py']
+2024-05-28 11:41:11,273 INFO - Executing command: ['airflow', 'tasks', 'run', 'data_processing_dag', 'process_csv_file', 'manual__2024-05-28T03:41:10.721351+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_dag.py']
+2024-05-28 11:41:13,981 INFO - Received executor event with state success for task instance TaskInstanceKey(dag_id='data_processing_dag', task_id='process_csv_file', run_id='manual__2024-05-28T03:41:10.721351+00:00', try_number=1, map_index=-1)
+2024-05-28 11:41:13,993 INFO - TaskInstance Finished: dag_id=data_processing_dag, task_id=process_csv_file, run_id=manual__2024-05-28T03:41:10.721351+00:00, map_index=-1, run_start_date=2024-05-28 03:41:13.193589+00:00, run_end_date=2024-05-28 03:41:13.561303+00:00, run_duration=0.367714, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=54, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2024-05-28 03:41:11.257250+00:00, queued_by_job_id=52, pid=30549
+2024-05-28 11:44:34,529 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-05-28 11:49:34,876 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-05-28 11:54:35,240 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-05-28 11:59:35,500 INFO - Adopting or resetting orphaned tasks for active dag runs
+2024-05-28 12:02:31,664 INFO - Exiting gracefully upon receiving signal 15
+2024-05-28 12:02:32,667 INFO - Sending Signals.SIGTERM to group 29976. PIDs of all processes in the group: [29976]
+2024-05-28 12:02:32,668 INFO - Sending the signal Signals.SIGTERM to group 29976
+2024-05-28 12:02:32,761 INFO - Process psutil.Process(pid=29976, status='terminated', exitcode=0, started='11:39:33') (29976) terminated with exit code 0
+2024-05-28 12:02:32,764 INFO - Sending Signals.SIGTERM to group 29976. PIDs of all processes in the group: []
+2024-05-28 12:02:32,764 INFO - Sending the signal Signals.SIGTERM to group 29976
+2024-05-28 12:02:32,765 INFO - Sending the signal Signals.SIGTERM to process 29976 as process group is missing.
+2024-05-28 12:02:32,765 INFO - Exited execute loop

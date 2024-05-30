@@ -1,0 +1,9 @@
+[2024-05-28 11:39:34 +0800] [29973] [INFO] Starting gunicorn 22.0.0
+[2024-05-28 11:39:34 +0800] [29973] [INFO] Listening at: http://[::]:8793 (29973)
+[2024-05-28 11:39:34 +0800] [29973] [INFO] Using worker: sync
+[2024-05-28 11:39:34 +0800] [29974] [INFO] Booting worker with pid: 29974
+[2024-05-28 11:39:34 +0800] [29977] [INFO] Booting worker with pid: 29977
+[2024-05-28 12:02:32 +0800] [29973] [INFO] Handling signal: term
+[2024-05-28 12:02:32 +0800] [29977] [INFO] Worker exiting (pid: 29977)
+[2024-05-28 12:02:32 +0800] [29974] [INFO] Worker exiting (pid: 29974)
+[2024-05-28 12:02:32 +0800] [29973] [INFO] Shutting down: Master

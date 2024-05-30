@@ -1,0 +1,21 @@
+[2024-05-30T11:14:07.458+0800] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-05-30T11:14:07.477+0800] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: data_processing_dag.process_csv_file manual__2024-05-30T03:14:04.030897+00:00 [queued]>
+[2024-05-30T11:14:07.487+0800] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: data_processing_dag.process_csv_file manual__2024-05-30T03:14:04.030897+00:00 [queued]>
+[2024-05-30T11:14:07.487+0800] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-05-30T11:14:07.516+0800] {taskinstance.py:2330} INFO - Executing <Task(PythonOperator): process_csv_file> on 2024-05-30 03:14:04.030897+00:00
+[2024-05-30T11:14:07.519+0800] {standard_task_runner.py:63} INFO - Started process 146435 to run task
+[2024-05-30T11:14:07.524+0800] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'data_processing_dag', 'process_csv_file', 'manual__2024-05-30T03:14:04.030897+00:00', '--job-id', '109', '--raw', '--subdir', 'DAGS_FOLDER/my_dag.py', '--cfg-path', '/tmp/tmpq7mfc4y3']
+[2024-05-30T11:14:07.525+0800] {standard_task_runner.py:91} INFO - Job 109: Subtask process_csv_file
+[2024-05-30T11:14:07.591+0800] {task_command.py:426} INFO - Running <TaskInstance: data_processing_dag.process_csv_file manual__2024-05-30T03:14:04.030897+00:00 [running]> on host Evil-Genius.
+[2024-05-30T11:14:07.679+0800] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='data_processing_dag' AIRFLOW_CTX_TASK_ID='process_csv_file' AIRFLOW_CTX_EXECUTION_DATE='2024-05-30T03:14:04.030897+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-30T03:14:04.030897+00:00'
+[2024-05-30T11:14:07.680+0800] {taskinstance.py:430} INFO - ::endgroup::
+[2024-05-30T11:14:07.953+0800] {logging_mixin.py:188} WARNING - /mnt/c/Users/User/PycharmProjects/airflow/dags/my_dag.py:34 DtypeWarning: Columns (6) have mixed types. Specify dtype option on import or set low_memory=False.
+[2024-05-30T11:14:08.027+0800] {logging_mixin.py:188} WARNING - /mnt/c/Users/User/PycharmProjects/airflow/dags/my_dag.py:40 UserWarning: Could not infer format, so each element will be parsed individually, falling back to `dateutil`. To ensure parsing is consistent and as-expected, please specify a format.
+[2024-05-30T11:14:08.855+0800] {logging_mixin.py:188} WARNING - /mnt/c/Users/User/PycharmProjects/airflow/dags/my_dag.py:49 FutureWarning: section/key [core/sql_alchemy_conn] has been deprecated, you should use[database/sql_alchemy_conn] instead. Please update your `conf.get*` call to use the new name
+[2024-05-30T11:14:08.859+0800] {logging_mixin.py:188} WARNING - /mnt/c/Users/User/PycharmProjects/airflow/dags/my_dag.py:56 UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sqlite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.
+[2024-05-30T11:14:10.714+0800] {python.py:237} INFO - Done. Returned value was: File processed and data saved to airflow.db
+[2024-05-30T11:14:10.715+0800] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-05-30T11:14:10.745+0800] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=data_processing_dag, task_id=process_csv_file, run_id=manual__2024-05-30T03:14:04.030897+00:00, execution_date=20240530T031404, start_date=20240530T031407, end_date=20240530T031410
+[2024-05-30T11:14:10.787+0800] {local_task_job_runner.py:240} INFO - Task exited with return code 0
+[2024-05-30T11:14:10.800+0800] {taskinstance.py:3498} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-05-30T11:14:10.801+0800] {local_task_job_runner.py:222} INFO - ::endgroup::

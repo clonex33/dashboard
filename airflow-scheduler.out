@@ -1,0 +1,67 @@
+[[34m2024-05-28T11:39:34.090+0800[0m] {[34mtask_context_logger.py:[0m63} INFO[0m - Task context logging is enabled[0m
+[[34m2024-05-28T11:39:34.091+0800[0m] {[34mexecutor_loader.py:[0m235} INFO[0m - Loaded executor: SequentialExecutor[0m
+[[34m2024-05-28T11:39:34.125+0800[0m] {[34mscheduler_job_runner.py:[0m796} INFO[0m - Starting the scheduler[0m
+[[34m2024-05-28T11:39:34.126+0800[0m] {[34mscheduler_job_runner.py:[0m803} INFO[0m - Processing each file at most -1 times[0m
+[[34m2024-05-28T11:39:34.130+0800[0m] {[34mmanager.py:[0m170} INFO[0m - Launched DagFileProcessorManager with pid: 29976[0m
+[[34m2024-05-28T11:39:34.131+0800[0m] {[34mscheduler_job_runner.py:[0m1595} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-05-28T11:39:34.134+0800[0m] {[34msettings.py:[0m60} INFO[0m - Configured default timezone UTC[0m
+[[34m2024-05-28T11:39:34.151+0800[0m] {[34mscheduler_job_runner.py:[0m1618} INFO[0m - Marked 1 SchedulerJob instances as failed[0m
+[2024-05-28T11:39:34.164+0800] {manager.py:393} WARNING - Because we cannot use more than 1 thread (parsing_processes = 2) when using sqlite. So we set parallelism to 1.
+[[34m2024-05-28T11:39:34.898+0800[0m] {[34mscheduler_job_runner.py:[0m417} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: data_processing_dag.process_csv_file manual__2024-05-28T03:25:27.677442+00:00 [scheduled]>[0m
+[[34m2024-05-28T11:39:34.899+0800[0m] {[34mscheduler_job_runner.py:[0m480} INFO[0m - DAG data_processing_dag has 0/16 running and queued tasks[0m
+[[34m2024-05-28T11:39:34.899+0800[0m] {[34mscheduler_job_runner.py:[0m596} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: data_processing_dag.process_csv_file manual__2024-05-28T03:25:27.677442+00:00 [scheduled]>[0m
+[[34m2024-05-28T11:39:34.906+0800[0m] {[34mscheduler_job_runner.py:[0m639} INFO[0m - Sending TaskInstanceKey(dag_id='data_processing_dag', task_id='process_csv_file', run_id='manual__2024-05-28T03:25:27.677442+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-05-28T11:39:34.907+0800[0m] {[34mbase_executor.py:[0m149} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'data_processing_dag', 'process_csv_file', 'manual__2024-05-28T03:25:27.677442+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_dag.py'][0m
+[[34m2024-05-28T11:39:34.914+0800[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'data_processing_dag', 'process_csv_file', 'manual__2024-05-28T03:25:27.677442+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_dag.py'][0m
+[[34m2024-05-28T11:39:35.653+0800[0m] {[34mdagbag.py:[0m545} INFO[0m - Filling up the DagBag from /mnt/c/Users/User/PycharmProjects/airflow/dags/my_dag.py[0m
+[[34m2024-05-28T11:39:36.086+0800[0m] {[34mexample_python_operator.py:[0m93} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-05-28T11:39:36.113+0800[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-05-28T11:39:36.202+0800[0m] {[34mexample_kubernetes_executor.py:[0m39} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-05-28T11:39:36.264+0800[0m] {[34mexample_python_decorator.py:[0m80} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-05-28T11:39:36.265+0800[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/clonex33/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-05-28T11:39:36.266+0800[0m] {[34mexample_local_kubernetes_executor.py:[0m41} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-05-28T11:39:36.436+0800[0m] {[34mtask_command.py:[0m426} INFO[0m - Running <TaskInstance: data_processing_dag.process_csv_file manual__2024-05-28T03:25:27.677442+00:00 [queued]> on host Evil-Genius.[0m
+[[34m2024-05-28T11:39:37.241+0800[0m] {[34mscheduler_job_runner.py:[0m689} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='data_processing_dag', task_id='process_csv_file', run_id='manual__2024-05-28T03:25:27.677442+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-05-28T11:39:37.254+0800[0m] {[34mscheduler_job_runner.py:[0m721} INFO[0m - TaskInstance Finished: dag_id=data_processing_dag, task_id=process_csv_file, run_id=manual__2024-05-28T03:25:27.677442+00:00, map_index=-1, run_start_date=2024-05-28 03:39:36.513187+00:00, run_end_date=2024-05-28 03:39:36.872983+00:00, run_duration=0.359796, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=53, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2024-05-28 03:39:34.900588+00:00, queued_by_job_id=52, pid=30011[0m
+[[34m2024-05-28T11:40:58.147+0800[0m] {[34mdagrun.py:[0m820} ERROR[0m - Marking run <DagRun data_processing_dag @ 2024-05-28 03:25:27.677442+00:00: manual__2024-05-28T03:25:27.677442+00:00, state:running, queued_at: 2024-05-28 03:25:27.706427+00:00. externally triggered: True> failed[0m
+[[34m2024-05-28T11:40:58.148+0800[0m] {[34mdagrun.py:[0m902} INFO[0m - DagRun Finished: dag_id=data_processing_dag, execution_date=2024-05-28 03:25:27.677442+00:00, run_id=manual__2024-05-28T03:25:27.677442+00:00, run_start_date=2024-05-28 03:39:34.827682+00:00, run_end_date=2024-05-28 03:40:58.148421+00:00, run_duration=83.320739, state=failed, external_trigger=True, run_type=manual, data_interval_start=2024-05-28 03:25:27.677442+00:00, data_interval_end=2024-05-28 03:25:27.677442+00:00, dag_hash=264ca8097941507f518d8e29fe30779d[0m
+[[34m2024-05-28T11:41:11.255+0800[0m] {[34mscheduler_job_runner.py:[0m417} INFO[0m - 1 tasks up for execution:
+	<TaskInstance: data_processing_dag.process_csv_file manual__2024-05-28T03:41:10.721351+00:00 [scheduled]>[0m
+[[34m2024-05-28T11:41:11.255+0800[0m] {[34mscheduler_job_runner.py:[0m480} INFO[0m - DAG data_processing_dag has 0/16 running and queued tasks[0m
+[[34m2024-05-28T11:41:11.256+0800[0m] {[34mscheduler_job_runner.py:[0m596} INFO[0m - Setting the following tasks to queued state:
+	<TaskInstance: data_processing_dag.process_csv_file manual__2024-05-28T03:41:10.721351+00:00 [scheduled]>[0m
+[[34m2024-05-28T11:41:11.264+0800[0m] {[34mscheduler_job_runner.py:[0m639} INFO[0m - Sending TaskInstanceKey(dag_id='data_processing_dag', task_id='process_csv_file', run_id='manual__2024-05-28T03:41:10.721351+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default[0m
+[[34m2024-05-28T11:41:11.265+0800[0m] {[34mbase_executor.py:[0m149} INFO[0m - Adding to queue: ['airflow', 'tasks', 'run', 'data_processing_dag', 'process_csv_file', 'manual__2024-05-28T03:41:10.721351+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_dag.py'][0m
+[[34m2024-05-28T11:41:11.273+0800[0m] {[34msequential_executor.py:[0m74} INFO[0m - Executing command: ['airflow', 'tasks', 'run', 'data_processing_dag', 'process_csv_file', 'manual__2024-05-28T03:41:10.721351+00:00', '--local', '--subdir', 'DAGS_FOLDER/my_dag.py'][0m
+[[34m2024-05-28T11:41:12.139+0800[0m] {[34mdagbag.py:[0m545} INFO[0m - Filling up the DagBag from /mnt/c/Users/User/PycharmProjects/airflow/dags/my_dag.py[0m
+[[34m2024-05-28T11:41:12.626+0800[0m] {[34mexample_python_operator.py:[0m93} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-05-28T11:41:12.659+0800[0m] {[34mtutorial_taskflow_api_virtualenv.py:[0m29} WARNING[0m - The tutorial_taskflow_api_virtualenv example DAG requires virtualenv, please install it.[0m
+[[34m2024-05-28T11:41:12.776+0800[0m] {[34mexample_kubernetes_executor.py:[0m39} WARNING[0m - The example_kubernetes_executor example DAG requires the kubernetes provider. Please install it with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-05-28T11:41:12.865+0800[0m] {[34mexample_python_decorator.py:[0m80} WARNING[0m - The virtalenv_python example task requires virtualenv, please install it.[0m
+[[34m2024-05-28T11:41:12.867+0800[0m] {[34mexample_local_kubernetes_executor.py:[0m40} WARNING[0m - Could not import DAGs in example_local_kubernetes_executor.py[0m
+Traceback (most recent call last):
+  File "/home/clonex33/.local/lib/python3.10/site-packages/airflow/example_dags/example_local_kubernetes_executor.py", line 38, in <module>
+    from kubernetes.client import models as k8s
+ModuleNotFoundError: No module named 'kubernetes'
+[[34m2024-05-28T11:41:12.868+0800[0m] {[34mexample_local_kubernetes_executor.py:[0m41} WARNING[0m - Install Kubernetes dependencies with: pip install apache-airflow[cncf.kubernetes][0m
+[[34m2024-05-28T11:41:13.078+0800[0m] {[34mtask_command.py:[0m426} INFO[0m - Running <TaskInstance: data_processing_dag.process_csv_file manual__2024-05-28T03:41:10.721351+00:00 [queued]> on host Evil-Genius.[0m
+[[34m2024-05-28T11:41:13.981+0800[0m] {[34mscheduler_job_runner.py:[0m689} INFO[0m - Received executor event with state success for task instance TaskInstanceKey(dag_id='data_processing_dag', task_id='process_csv_file', run_id='manual__2024-05-28T03:41:10.721351+00:00', try_number=1, map_index=-1)[0m
+[[34m2024-05-28T11:41:13.993+0800[0m] {[34mscheduler_job_runner.py:[0m721} INFO[0m - TaskInstance Finished: dag_id=data_processing_dag, task_id=process_csv_file, run_id=manual__2024-05-28T03:41:10.721351+00:00, map_index=-1, run_start_date=2024-05-28 03:41:13.193589+00:00, run_end_date=2024-05-28 03:41:13.561303+00:00, run_duration=0.367714, state=up_for_retry, executor_state=success, try_number=1, max_tries=1, job_id=54, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2024-05-28 03:41:11.257250+00:00, queued_by_job_id=52, pid=30549[0m
+[[34m2024-05-28T11:44:34.529+0800[0m] {[34mscheduler_job_runner.py:[0m1595} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-05-28T11:49:34.876+0800[0m] {[34mscheduler_job_runner.py:[0m1595} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-05-28T11:54:35.240+0800[0m] {[34mscheduler_job_runner.py:[0m1595} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-05-28T11:59:35.500+0800[0m] {[34mscheduler_job_runner.py:[0m1595} INFO[0m - Adopting or resetting orphaned tasks for active dag runs[0m
+[[34m2024-05-28T12:02:31.664+0800[0m] {[34mscheduler_job_runner.py:[0m256} INFO[0m - Exiting gracefully upon receiving signal 15[0m
+[[34m2024-05-28T12:02:32.667+0800[0m] {[34mprocess_utils.py:[0m132} INFO[0m - Sending Signals.SIGTERM to group 29976. PIDs of all processes in the group: [29976][0m
+[[34m2024-05-28T12:02:32.668+0800[0m] {[34mprocess_utils.py:[0m87} INFO[0m - Sending the signal Signals.SIGTERM to group 29976[0m
+[[34m2024-05-28T12:02:32.761+0800[0m] {[34mprocess_utils.py:[0m80} INFO[0m - Process psutil.Process(pid=29976, status='terminated', exitcode=0, started='11:39:33') (29976) terminated with exit code 0[0m
+[[34m2024-05-28T12:02:32.764+0800[0m] {[34mprocess_utils.py:[0m132} INFO[0m - Sending Signals.SIGTERM to group 29976. PIDs of all processes in the group: [][0m
+[[34m2024-05-28T12:02:32.764+0800[0m] {[34mprocess_utils.py:[0m87} INFO[0m - Sending the signal Signals.SIGTERM to group 29976[0m
+[[34m2024-05-28T12:02:32.765+0800[0m] {[34mprocess_utils.py:[0m101} INFO[0m - Sending the signal Signals.SIGTERM to process 29976 as process group is missing.[0m
+[[34m2024-05-28T12:02:32.765+0800[0m] {[34mscheduler_job_runner.py:[0m872} INFO[0m - Exited execute loop[0m

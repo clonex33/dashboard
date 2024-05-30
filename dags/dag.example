@@ -1,0 +1,51 @@
+from datetime import datetime, timedelta
+import os
+import pandas as pd
+from airflow import DAG
+from airflow.operators.python_operator import PythonOperator
+from airflow.exceptions import AirflowException
+
+# Define the DAG
+default_args = {
+    'owner': 'airflow',
+    'start_date': datetime(2024, 5, 27),
+    'retries': 0,
+    'execution_timeout': timedelta(minutes=1),  # Fail if the task runs longer than 1 minute
+}
+
+dag = DAG(
+    'data_processing_dag',
+    default_args=default_args,
+    description='A DAG to process website traffic data from a CSV file',
+    schedule_interval=None,
+    tags=['data-processing'],
+)
+
+# Function to read, clean, and process the CSV file
+def process_csv_file(dag_id):
+    input_filepath = 'reviews.csv'
+    output_filepath = 'write_reviews.csv'
+
+    if not os.path.exists(input_filepath):
+        raise AirflowException(f"Input file does not exist: {input_filepath}")
+
+    # Read the CSV file
+    listings = pd.read_csv(input_filepath)
+
+    # Add a new column for the DAG ID
+    listings['dag_id'] = dag_id
+
+    # Save the DataFrame to a new CSV file
+    listings.to_csv(output_filepath, index=False)
+
+    return f"File processed and saved to {output_filepath}"
+
+# Define the task to process the CSV file
+process_csv_task = PythonOperator(
+    task_id='process_csv_file',
+    python_callable=process_csv_file,
+    op_args=[dag.dag_id],  # Pass the DAG ID as an argument to the function
+    dag=dag,
+)
+
+process_csv_task

@@ -1,0 +1,19 @@
+
+
+source venv/Scripts/activate
+export AIRFLOW_HOME=$(pwd)
+airflow webserver --port 8080
+python -m airflow webserver --port 8080
+
+
+http://localhost:8080
+
+python3 -m airflow users create \
+    --username admin \
+    --firstname Mukmin \
+    --lastname Ahmad \
+    --role Admin \
+    --email admin@example.com
+
+#acess db
+sqlite3 /mnt/c/Users/User/PycharmProjects/airflow/airflow.db
