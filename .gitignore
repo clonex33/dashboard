@@ -1,0 +1,14 @@
+# Ignore the airflow.db file
+airflow.db
+
+# Ignore Python compiled files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment directories
+venv/
+env/
+
+# Ignore other temporary files
+*.log
+*.tmp
